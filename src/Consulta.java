@@ -1,4 +1,5 @@
 public class Consulta {
+    
     private String fecha;
     private String motivo;
     private String diagnostico;
