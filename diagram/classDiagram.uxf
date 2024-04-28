@@ -1,0 +1,105 @@
+<diagram program="umletino" version="15.1"><zoom_level>6</zoom_level><help_text>Space for diagram notesmiento</help_text><element><id>UMLClass</id><coordinates><x>30</x><y>294</y><w>264</w><h>192</h></coordinates><panel_attributes>Animal
+--
+- nombre
+- especie
+- raza
+- propietario
+- historialConsulta
+
+--
++Animal(String nombre, String especie, String raza, Cliente Propietario)
+
++ agregarConsulta(Consulta)
++ getNombre()
++ setNombre(String nombre)
++ getEspecie()
++ setEspecie(String especie)
++ getRaza()
++ setRaza(String raza)
++ getPropietario()
++ setPropietario(Cliente propietario)
++ getHistorialConsultas()
++ setHistorialConsultas(ArrayList&lt;Consulta&gt; historialConsultas)
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>66</x><y>102</y><w>210</w><h>150</h></coordinates><panel_attributes>Cliente
+--
+- nombre
+- direccion
+- telefono
+- listaAnimales
+--
++ Cliente(String nombre, String direccion, String telefono)
+
++ getListaAnimales()
++ setListaAnimales(ArrayList&lt;Animal&gt; listaAnimales)
++ getTelefono()
++ setTelefono (String telefono)
++ getDireccion()
++ setDireccion(String direccion)
++ getNombre()
++ setNombre(String nombre)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>360</x><y>294</y><w>264</w><h>204</h></coordinates><panel_attributes>Consulta
+--
+- fecha
+- motivo
+- diagnostico
+- tratamiento
+- veterinario
+
+--
+
++ Consulta(String fecha, String motivo, 
+String diagnostico, String tratamiento, Veterinario veterinario)
+
++ getFecha()
++ setFecha(Stringfecha)
++ getMotivo()
++ setMotivo (String motivo)
++ getDiagnostico()
++ setDiagnostico(String diagnostico)
++ getTratamiento()
++ setTramiento(String Tratamiento)
++ getVeterinario()
++ setVeterinario()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>360</x><y>102</y><w>216</w><h>138</h></coordinates><panel_attributes>Veterinaria
+--
+- listaAnimales
+- listaClientes
+
+--
+
++ Veterinaria()
++ agregarCliente(Cliente cliente)
++ agregarAnimal (Animal animal)
++ asignarConsulta (Animal animal, Consulta consulta)
++ imprimirConsultar()
++ getListaAnimales()
++ setListaAnimales (ArrayList&lt;Animal&gt; listaAnimales)
++ getListaClientes()
++ setListaClientes(ArrayList&lt;Cliente&gt; listaClientes))
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>678</x><y>294</y><w>210</w><h>102</h></coordinates><panel_attributes>Veterinario
+--
+- nombre
+- especialidad
+
+--
++ Veterinario(String nombre, String especialidad)
++ Veterinario()
++ getNombre()
++ setNombre(String nombre)
++ getEspecialidad()
++ setEspecialidad(String especialidad)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>288</x><y>378</y><w>84</w><h>30</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1..*
+Tiene &gt;</panel_attributes><additional_attributes>10;20;120;20</additional_attributes></element><element><id>Relation</id><coordinates><x>618</x><y>330</y><w>72</w><h>30</h></coordinates><panel_attributes>lt=-
+m1=0..*
+m2=1..*
+Atentidad por&gt;</panel_attributes><additional_attributes>10;20;100;20</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>162</y><w>102</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1..*
+m2=1
+&lt; Tiene </panel_attributes><additional_attributes>10;20;150;20</additional_attributes></element><element><id>Relation</id><coordinates><x>276</x><y>204</y><w>96</w><h>102</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1..*
+m2=1
+&lt; Atiende</panel_attributes><additional_attributes>10;150;140;10</additional_attributes></element><element><id>Relation</id><coordinates><x>462</x><y>234</y><w>54</w><h>72</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1..*
+m2=1
+Procesa &gt;</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element></diagram>
